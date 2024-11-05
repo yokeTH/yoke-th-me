@@ -1,0 +1,28 @@
+@keyframes fadeCursor {
+  0%, 100% {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+}
+
+.cursor {
+  position: relative;
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: green;
+  animation: fadeCursor 1s infinite;
+}
+
+.cursor::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  animation: fadeCursor 1s infinite;
+}
