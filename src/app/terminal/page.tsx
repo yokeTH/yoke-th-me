@@ -67,9 +67,9 @@ const TerminalPortfolio: React.FC = () => {
       name: "welcome",
       content: (
         <CommandOutput>
-          Hi, use the command "about" to learn more about me.
+          Hi, use the command &quot;about&quot; to learn more about me.
           <br />
-          Alternately use "help" to see all commands.
+          Alternately use &quot;help&quot; to see all commands.
         </CommandOutput>
       ),
     },
