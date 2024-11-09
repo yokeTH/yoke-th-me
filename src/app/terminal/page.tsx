@@ -6,7 +6,7 @@ import { CommandOutput } from "@/components/ui/terminal/CommandOutput";
 
 const commands = {
   about:
-    "Hi, I'm Thanapon Johdee, a engineering student with a passion for computer specifically software development and hardware. I love creating tools that improve quality of life and am always excited to learn new things.",
+    "Hi, I'm Thanapon Johdee, an engineering student with a passion for computer specifically software development and hardware. I love creating tools that improve quality of life and am always excited to learn new things.",
   projects: [
     {
       name: "SmallMediumLargeXO",
@@ -67,9 +67,9 @@ const TerminalPortfolio: React.FC = () => {
       name: "welcome",
       content: (
         <CommandOutput>
-          Hi, use the command `about`` to learn more about me.
+          Hi, use the command "about" to learn more about me.
           <br />
-          Alternately use `help`` to see all commands.
+          Alternately use "help" to see all commands.
         </CommandOutput>
       ),
     },
@@ -86,7 +86,7 @@ const TerminalPortfolio: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-900 text-white font-mono">
+    <div className="flex flex-col h-dvh bg-gray-900 text-white font-mono">
       <CommandHistory commandHistory={commandHistory} />
       <CommandInput onSubmit={executeCommand} />
     </div>

@@ -103,16 +103,24 @@ export const CommandInput: React.FC<CommandInputProps> = ({ onSubmit }) => {
   const displayBeforeCursor = inputValue.slice(0, cursorPosition);
   const displayAfterCursor = inputValue.slice(cursorPosition);
 
+  const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
+    const newValue = e.currentTarget.value;
+    // setInputValue(newValue)
+  }
+
   return (
     <div className="bg-gray-800 px-4 py-2 flex items-center">
       <span className="text-green-500 mr-2">{">"}</span>
       <div
-        className="bg-transparent text-white flex-1 focus:outline-none whitespace-pre"
+        className="bg-transparent text-white flex-1 focus:outline-none whitespace-pre relative"
         tabIndex={0}
       >
+        <input type="text" className="opacity-0 absolute -top-2 w-full" value={inputValue} onChange={handleOnChange}/>
+        <div className="absolute -top-2">
         {displayBeforeCursor}
         {isFocused && <span className={styles.cursor}></span>}
         {displayAfterCursor}
+        </div>
       </div>
     </div>
   );
