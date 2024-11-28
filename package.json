@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "yarn next-on-pages",
-    "preview": "yarn pages:build && wrangler pages dev",
-    "deploy": "yarn pages:build && wrangler pages deploy",
+    "pages:build": "next-on-pages",
+    "preview": "pages:build && wrangler pages dev",
+    "deploy": "pages:build && wrangler pages deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts"
   },
   "dependencies": {
