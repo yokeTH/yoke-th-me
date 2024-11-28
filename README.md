@@ -20,14 +20,14 @@ Available commands:
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/)
 - **Package Manager**: [Bun](https://bun.sh/)
-- **Other technologies**: [List any other significant technologies]
+<!-- - **Other technologies**: [List any other significant technologies] -->
 
-## 📝 Environment Variables
+<!-- ## 📝 Environment Variables
 
 Create a `.env` file in the root directory:
 ```env
 # Add your environment variables here
-```
+``` -->
 
 ## 🚀 Deployment
 
