@@ -9,10 +9,38 @@ import Link from "next/link";
 import Image from "next/image";
 import { ComposeTextOutputs } from "@/components/ui/terminal/textOutput";
 
+const renderHelpCommand = (): JSX.Element => {
+  const helpCommand: Record<string, Command> = {
+    help: {
+      name: "help",
+      content: [{
+        type: 'text',
+        content: 'Available Commands:'
+      },
+      {
+        type: 'endline'
+      },
+      ...Object.keys(commands).map((commandName) => ({ type: 'text', content: `${commandName}\n`, format:['list-item', 'italic'] })) as CommandContent[]
+    ],
+    },
+  }
 
+  return (
+    <CommandOutput>
+      {helpCommand.help.content.map((contentItem) =>
+        renderCommandContent(contentItem)
+      )}
+    </CommandOutput>
+  );
+}
 
 const commandDecoder = (command: string): JSX.Element => {
   const foundCommand = commands[command.toLowerCase() as keyof typeof commands] as Command;
+
+  // hook the help command to make it real-time update available commands
+  if (command.toLocaleLowerCase() === 'help') {
+    return renderHelpCommand()
+  }
 
   if (!foundCommand) {
     return (
@@ -21,6 +49,7 @@ const commandDecoder = (command: string): JSX.Element => {
       </CommandOutput>
     )
   }
+
 
   return renderCommand(foundCommand)
 }
@@ -63,7 +92,7 @@ const renderCommandContent = (content: CommandContent): JSX.Element => {
         {textContent.content}
       </ComposeTextOutputs>;
     case 'endline':
-      return <CommandOutput>{""}</CommandOutput>
+      return <br/>
     default:
       return <></>;
   }
