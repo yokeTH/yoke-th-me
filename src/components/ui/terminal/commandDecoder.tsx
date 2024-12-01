@@ -17,7 +17,7 @@ export const commandDecoder = (command: string): JSX.Element => {
   if (!foundCommand) {
     return (
       <CommandOutput>
-        Command `{command}` not found. Type "help" to see available commands.
+        Command `{command}` not found. Type &quot;help&quot; to see available commands.
       </CommandOutput>
     );
   }
