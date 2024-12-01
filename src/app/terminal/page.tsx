@@ -3,63 +3,61 @@ import React, { useState } from "react";
 import { CommandHistory } from "@/components/ui/terminal/CommandHistory";
 import { CommandInput } from "@/components/ui/terminal/CommandInput";
 import { CommandOutput } from "@/components/ui/terminal/CommandOutput";
+import { commands } from "./commands";
+import { Command, CommandContent, LinkCommand } from "./types";
+import Link from "next/link";
+import Image from "next/image";
 
-const commands = {
-  about:
-    "Hi, I'm Thanapon Johdee, an engineering student with a passion for computer specifically software development and hardware. I love creating tools that improve quality of life and am always excited to learn new things.",
-  projects: [
-    {
-      name: "SmallMediumLargeXO",
-      description: "A final project of Programming Methodology that I course.",
-      link: "https://github.com/yokeTH/SmallMediumLargeXO",
-    },
-    {
-      name: "2110363-HW_SYN_LAB_I",
-      description:
-        "A GitHub repository store Verilog code from Hardware synthesis Lab",
-      link: "https://github.com/yokeTH/2110363-HW_SYN_LAB_I",
-    },
-    {
-      name: "ComEngEss-final-project-backend",
-      description:
-        "A final project of Computer Engineering Essential. The project not allow to use external lib I need to create from scratch",
-      link: "https://github.com/yokeTH/ComEngEss-final-project-backend",
-    },
-  ],
-  contact:
-    "You can reach me at contact@yoke-th.me or connect with me on Instagram @yoke.th .",
-  help: "Available commands:\n- about\n- projects\n- contact\n- clear",
-};
+const commandDecoder = (command: string): JSX.Element => {
+  const foundCommand = commands[command.toLowerCase() as keyof typeof commands] as Command;
 
-// TODO: Make It flexible
-const commandDecoder = (command: string) => {
-  switch (command.toLowerCase()) {
-    case "about":
-      return <CommandOutput>{commands.about}</CommandOutput>;
-    case "projects":
-      return commands.projects.map((project) => (
-        <CommandOutput key={project.name}>
-          <span>
-            {project.name}: {project.description} -{" "}
-          </span>
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "underline", color: "inherit" }}
-          >
-            {project.link}
-          </a>
-        </CommandOutput>
-      ));
-    case "contact":
-      return <CommandOutput>{commands.contact}</CommandOutput>;
-    case "help":
-      return <CommandOutput>{commands.help}</CommandOutput>;
-    default:
-      return 'Command not found. Type "help" to see available commands.';
+  if (!foundCommand) {
+    return (
+      <CommandOutput>
+        Command `{command}` not found. Type "help" to see available commands.
+      </CommandOutput>
+    )
   }
-};
+
+  return renderCommand(foundCommand)
+}
+
+
+const renderCommand = (command: Command): JSX.Element => {
+
+  return (
+    <CommandOutput>
+      {command.content.map((contentItem) =>
+        renderCommandContent(contentItem)
+      )}
+    </CommandOutput>
+  );
+
+}
+
+const renderCommandContent = (content: CommandContent): JSX.Element => {
+  switch (content.type) {
+    case 'image':
+      <Image src={content.content} alt={""}></Image>
+    case 'link':
+      return <Link
+        href={(content as LinkCommand).url}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "underline", color: "inherit" }}
+      >
+        {(content as LinkCommand).placeholder}
+      </Link>
+    case 'text':
+      return <span>{content.content}</span>;
+    case 'endline':
+      return <CommandOutput>{""}</CommandOutput>
+    default:
+      <></>
+  }
+  return <></>
+}
+
 
 const TerminalPortfolio: React.FC = () => {
   const [commandHistory, setCommandHistory] = useState<CommandHistory[]>([
