@@ -4,9 +4,12 @@ import { CommandHistory } from "@/components/ui/terminal/CommandHistory";
 import { CommandInput } from "@/components/ui/terminal/CommandInput";
 import { CommandOutput } from "@/components/ui/terminal/CommandOutput";
 import { commands } from "./commands";
-import { Command, CommandContent, LinkCommand } from "./types";
+import { Command, CommandContent, LinkCommand, TextCommand, } from "./types";
 import Link from "next/link";
 import Image from "next/image";
+import { ComposeTextOutputs } from "@/components/ui/terminal/textOutput";
+
+
 
 const commandDecoder = (command: string): JSX.Element => {
   const foundCommand = commands[command.toLowerCase() as keyof typeof commands] as Command;
@@ -38,25 +41,34 @@ const renderCommand = (command: Command): JSX.Element => {
 const renderCommandContent = (content: CommandContent): JSX.Element => {
   switch (content.type) {
     case 'image':
-      <Image src={content.content} alt={""}></Image>
+      return <Image src={content.content} alt={""} />;
     case 'link':
       return <Link
         href={(content as LinkCommand).url}
         target="_blank"
         rel="noopener noreferrer"
         style={{ textDecoration: "underline", color: "inherit" }}
+        className="after:content-['↗']"
       >
         {(content as LinkCommand).placeholder}
       </Link>
     case 'text':
-      return <span>{content.content}</span>;
+      const textContent = content as TextCommand;
+      const formats = Array.isArray(textContent.format)
+        ? textContent.format
+        : textContent.format
+          ? [textContent.format]
+          : [];
+      return <ComposeTextOutputs formats={formats}>
+        {textContent.content}
+      </ComposeTextOutputs>;
     case 'endline':
       return <CommandOutput>{""}</CommandOutput>
     default:
-      <></>
+      return <></>;
   }
-  return <></>
 }
+
 
 
 const TerminalPortfolio: React.FC = () => {
