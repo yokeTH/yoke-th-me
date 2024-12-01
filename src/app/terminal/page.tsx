@@ -124,7 +124,7 @@ const TerminalPortfolio: React.FC = () => {
       name: "welcome",
       content: (
         <CommandOutput>
-          Hi, use the command &quot;about&quot; to learn more about me.
+          Hi my name is <span className="bg-yellow-200 text-black text-lg font-bold mb-1">Thanapon Johdee</span> , use the command &quot;about&quot; to learn more about me.
           <br />
           Alternately use &quot;help&quot; to see all commands.
         </CommandOutput>
