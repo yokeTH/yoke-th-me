@@ -12,6 +12,7 @@ export type TextCommandFormat =
   | "warning"
   | "highlight"
   | "code"
+  | "blue"
   // Headings
   | "h1"
   | "h2"
@@ -78,7 +79,7 @@ export interface EndlineCommand extends BaseCommand {
 }
 
 export interface separatorCommand extends BaseCommand {
-  type: 'separator'
+  type: "separator";
 }
 
 export type CommandContent =

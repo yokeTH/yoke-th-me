@@ -11,6 +11,7 @@ const formatToTailwind: Record<TextCommandFormat, string> = {
     'warning': 'text-yellow-500',
     'highlight': 'bg-yellow-200 text-black',
     'code': 'bg-gray-800 text-gray-200 px-2 py-0.5 rounded font-mono',
+    'blue': "text-blue-500",
 
     // Headings
     'h1': 'text-4xl font-bold mb-4',
