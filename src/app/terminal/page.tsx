@@ -110,7 +110,7 @@ const renderCommandContent = (content: CommandContent): JSX.Element => {
     case 'endline':
       return <br />
     case 'separator':
-      return <Separator />
+      return <CommandOutput><Separator /></CommandOutput>
     default:
       return <></>;
   }
