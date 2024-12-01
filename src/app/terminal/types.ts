@@ -59,6 +59,7 @@ export interface TextCommand extends BaseCommand {
   type: "text";
   format?: TextCommandFormat | TextCommandFormat[];
   content: string;
+  url?: string;
 }
 
 export interface LinkCommand extends BaseCommand {
@@ -76,11 +77,16 @@ export interface EndlineCommand extends BaseCommand {
   type: "endline";
 }
 
+export interface separatorCommand extends BaseCommand {
+  type: 'separator'
+}
+
 export type CommandContent =
   | TextCommand
   | LinkCommand
   | ImageCommand
-  | EndlineCommand;
+  | EndlineCommand
+  | separatorCommand;
 
 export interface Command {
   name: string;

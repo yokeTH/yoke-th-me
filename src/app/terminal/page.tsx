@@ -8,6 +8,7 @@ import { Command, CommandContent, LinkCommand, TextCommand, } from "./types";
 import Link from "next/link";
 import Image from "next/image";
 import { ComposeTextOutputs } from "@/components/ui/terminal/textOutput";
+import { Separator } from "@/components/ui/separator";
 
 const renderHelpCommand = (): JSX.Element => {
   const helpCommand: Record<string, Command> = {
@@ -20,8 +21,8 @@ const renderHelpCommand = (): JSX.Element => {
       {
         type: 'endline'
       },
-      ...Object.keys(commands).map((commandName) => ({ type: 'text', content: `${commandName}\n`, format:['list-item', 'italic'] })) as CommandContent[]
-    ],
+      ...Object.keys(commands).map((commandName) => ({ type: 'text', content: `${commandName}\n`, format: ['list-item', 'italic'] })) as CommandContent[]
+      ],
     },
   }
 
@@ -88,11 +89,28 @@ const renderCommandContent = (content: CommandContent): JSX.Element => {
         : textContent.format
           ? [textContent.format]
           : [];
+
       return <ComposeTextOutputs formats={formats}>
-        {textContent.content}
+        {textContent.url ?
+          // if provided url return as link
+          <Link
+            href={textContent.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="after:content-['↗']"
+          >
+            {textContent.content}
+          </Link>
+
+          :
+          // if not provided url
+          textContent.content
+        }
       </ComposeTextOutputs>;
     case 'endline':
-      return <br/>
+      return <br />
+    case 'separator':
+      return <Separator />
     default:
       return <></>;
   }
