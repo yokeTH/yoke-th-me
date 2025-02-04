@@ -1,0 +1,150 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Thanapon Johdee}}\\
+	Bangkok, Thailand $\cdot$ contact@yoke-th.me $\cdot$ +66941691727 $\cdot$ https://yoke-th.me\\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{Chulalongkorn University}\hfill Bangkok, Thailand\\
+Bachelor of Engineering Computer Engineering \textit{GPA: 3.09} \hfill August 2022 - Present\\
+\vspace{2mm}
+\textbf{Surawittayakarn School}\hfill Surin, Thailand\\
+Senior High School Special Program in Science, Mathematics, Technology, and Environment \textit{GPA: 3.82} \hfill June 2018 - April 2021\\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Experiences}
+\vspace{1mm}
+
+\textbf{Intro to CEDT course} \hfill Chulalongkorn University\\
+\textit{Teaching Assistant} \hfill August 2024 - September 2024\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Prepared exercises and materials for students before each class.
+	\item Reviewed and provided feedback on student assignments.
+\end{itemize}
+\textbf{Hardware Synthesis Lab course} \hfill Chulalongkorn University\\
+\textit{Teaching Assistant} \hfill January 2025 - May 2025\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Developed a Docker-based solution to run Vivado on macOS, improving accessibility for Mac users.
+	\item Designed lab exercises to support the new setup, enhancing the learning experience.
+\end{itemize}
+\textbf{Engineering Student Group E} \hfill Chulalongkorn University\\
+\textit{Treasurer} \hfill October 2022 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Managed finances and handled budgeting for events and activities within the group.
+\end{itemize}
+
+\header{Skills \& Proficiencies}
+\begin{tabular}{ l l }
+	Languages:               & Thai (native), English                        \\
+	Programing Languages:    & Typescript, Golang, HTML CSS JS, Python, Java \\
+	Web Technologies:        & Next.js, TailwindCSS, Svelte                  \\
+	Cloud \& Infrastructure: & Docker, Google Cloud, Amazon Web Services     \\
+	Databases:               & Redis, PostgreSQL, MongoDB                    \\
+\end{tabular}
+\vspace{2mm}
+
+\header{Projects}
+{\textbf{ConDormHub}} {\sl Golang, Nextjs, GCP Cloud Run, PostgreSQL} \\
+A resident booking service developed for the Software Engineering II course. I led both frontend and backend development, ensuring performance and scalability, and managed deployment on cloud platforms.\\
+\vspace*{2mm}
+{\textbf{fund-oral-report}} {\sl Nextjs, GCP Cloud Function, Vercel, MongoDB} \\
+A volunteer project designed to ease course progress tracking for students by replacing cumbersome Excel files.\\
+\vspace*{2mm}
+{\textbf{SmallMediumLargeXO}} {\sl Java, JavaFX, Socket} \\
+The final project of the Programming Methodology I course. It\textquotesingle{}s a Java GUI Tic-Tac-Toe game with three board sizes and LAN support for seamless client communication via sockets.\\
+\vspace*{2mm}
+{\textbf{vivado-mac}} {\sl Docker, Bash Script} \\
+A provides a solution to run Xilinx Vivado on macOS using Docker containerization.\\
+\vspace*{2mm}
+{\textbf{notion-to-google-calendar}} {\sl Typescript, Cloudflare Worker, Cornjob} \\
+A personal tool I created to sync my Notion database with Google Calendar, allowing for seamless integration and better time management.\\
+\vspace*{2mm}
+{\textbf{grader-dumper}} {\sl Python} \\
+A Python project I created for scraping and downloading all propositions from university gradder system for educational purposes.\\
+\vspace*{2mm}
+{\sl (Explore another project of mine on my GitHub: yokeTH.)} \hfill https://github.com/yokeTH\\
+
+\vspace*{2mm}
+
+
+
+\ 
+\end{document}
