@@ -1,0 +1,201 @@
+{
+  "selectedTemplate": 1,
+  "headings": {
+    "work": "Experiences",
+    "skills": "Skills & Proficiencies",
+    "projects": "",
+    "awards": ""
+  },
+  "basics": {
+    "email": "contact@yoke-th.me",
+    "phone": "+66941691727",
+    "location": {
+      "address": "Bangkok, Thailand"
+    },
+    "name": "Thanapon Johdee",
+    "website": "https://yoke-th.me"
+  },
+  "education": [
+    {
+      "location": "Bangkok, Thailand",
+      "studyType": "Bachelor of Engineering",
+      "gpa": "3.09",
+      "institution": "Chulalongkorn University",
+      "area": "Computer Engineering",
+      "endDate": "Present",
+      "startDate": "August 2022"
+    },
+    {
+      "institution": "Surawittayakarn School",
+      "location": "Surin, Thailand",
+      "studyType": "Senior High School",
+      "area": "Special Program in Science, Mathematics, Technology, and Environment",
+      "gpa": "3.82",
+      "startDate": "June 2018",
+      "endDate": "April 2021"
+    }
+  ],
+  "work": [
+    {
+      "company": "Intro to CEDT course",
+      "website": "",
+      "endDate": "September 2024",
+      "highlights": [
+        "Prepared exercises and materials for students before each class.",
+        "Reviewed and provided feedback on student assignments."
+      ],
+      "startDate": "August 2024",
+      "location": "Chulalongkorn University",
+      "position": "Teaching Assistant"
+    },
+    {
+      "highlights": [
+        "Developed a Docker-based solution to run Vivado on macOS, improving accessibility for Mac users.",
+        "Designed lab exercises to support the new setup, enhancing the learning experience."
+      ],
+      "company": "Hardware Synthesis Lab course",
+      "startDate": "January 2025",
+      "endDate": "May 2025",
+      "position": "Teaching Assistant",
+      "location": "Chulalongkorn University"
+    },
+    {
+      "highlights": [
+        "Managed finances and handled budgeting for events and activities within the group."
+      ],
+      "company": "Engineering Student Group E",
+      "location": "Chulalongkorn University",
+      "position": "Treasurer",
+      "endDate": "Present",
+      "startDate": "October 2022"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "Thai (native)",
+        "English"
+      ],
+      "name": "Languages"
+    },
+    {
+      "keywords": [
+        "Typescript",
+        "Golang",
+        "HTML CSS JS",
+        "Python",
+        "Java"
+      ],
+      "name": "Programing Languages"
+    },
+    {
+      "keywords": [
+        "Next.js",
+        "TailwindCSS",
+        "Svelte"
+      ],
+      "name": "Web Technologies"
+    },
+    {
+      "keywords": [
+        "Docker",
+        "Google Cloud",
+        "Amazon Web Services",
+        null
+      ],
+      "name": "Cloud & Infrastructure"
+    },
+    {
+      "keywords": [
+        "Redis",
+        "PostgreSQL",
+        "MongoDB"
+      ],
+      "name": "Databases"
+    },
+    {
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "keywords": [
+        "Golang",
+        "Nextjs",
+        "GCP Cloud Run",
+        "PostgreSQL"
+      ],
+      "name": "ConDormHub",
+      "description": "A resident booking service developed for the Software Engineering II course. I led both frontend and backend development, ensuring performance and scalability, and managed deployment on cloud platforms."
+    },
+    {
+      "keywords": [
+        "Nextjs",
+        "GCP Cloud Function",
+        "Vercel",
+        "MongoDB"
+      ],
+      "name": "fund-oral-report",
+      "description": "A volunteer project designed to ease course progress tracking for students by replacing cumbersome Excel files."
+    },
+    {
+      "keywords": [
+        "Java",
+        "JavaFX",
+        "Socket"
+      ],
+      "description": "The final project of the Programming Methodology I course. It's a Java GUI Tic-Tac-Toe game with three board sizes and LAN support for seamless client communication via sockets.",
+      "name": "SmallMediumLargeXO"
+    },
+    {
+      "keywords": [
+        "Docker",
+        "Bash Script"
+      ],
+      "name": "vivado-mac",
+      "description": "A provides a solution to run Xilinx Vivado on macOS using Docker containerization."
+    },
+    {
+      "keywords": [
+        "Typescript",
+        "Cloudflare Worker",
+        "Cornjob"
+      ],
+      "name": "notion-to-google-calendar",
+      "description": "A personal tool I created to sync my Notion database with Google Calendar, allowing for seamless integration and better time management."
+    },
+    {
+      "keywords": [
+        "Python",
+        null
+      ],
+      "name": "grader-dumper",
+      "description": "A Python project I created for scraping and downloading all propositions from university gradder system for educational purposes."
+    },
+    {
+      "keywords": [
+        "(Explore another project of mine on my GitHub: yokeTH.)"
+      ],
+      "url": "https://github.com/yokeTH"
+    }
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "summary": ""
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}
