@@ -20,7 +20,7 @@ export default function Home() {
                   A terminal-inspired portfolio where users can type commands to view the my information.
                 </h3>
               </div>
-              <Image src="/thumbnail/terminal.png" width={1000} height={1000} alt={"terminal thumbnail"} className="group-hover/card:scale-150 group-hover/card:translate-x-44 group-hover/card:translate-y-28 transition" />
+              <Image src="/thumbnail/terminal.png" width={10000} height={10000} alt={"terminal thumbnail"} className="group-hover/card:scale-150 group-hover/card:translate-x-44 group-hover/card:translate-y-28 transition" />
             </Link>
           </div>
           <div className="group/card rounded-xl overflow-hidden border">
@@ -33,7 +33,7 @@ export default function Home() {
                   A detailed view of my professional experience, education, and skills.
                 </h3>
               </div>
-              <Image src="/thumbnail/resume.png" width={1000} height={1000} alt={"resume thumbnail"} className="hover/card:scale-110 transition" />
+              <Image src="/thumbnail/resume.png" width={10000} height={10000} alt={"resume thumbnail"} className="hover/card:scale-110 transition" />
             </Link>
           </div>
         </div>
