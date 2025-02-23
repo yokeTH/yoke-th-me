@@ -1,0 +1,25 @@
+@keyframes slide-In-Right {
+    from {
+        transform: translateX(100%)
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slide-In-Right 0.75s ease-in-out forwards;
+}
+
+@keyframes slide-In-Left {
+    from {
+        transform: translateX(-100%)
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slide-In-Left 0.75s ease-in-out forwards;
+}
