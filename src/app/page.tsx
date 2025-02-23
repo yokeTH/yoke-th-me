@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer/footer";
 import { Navbar } from "@/components/nav/nav";
 import Image from 'next/image';
 import Link from "next/link";
@@ -37,6 +38,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Footer/>
     </div>
   );
 }
