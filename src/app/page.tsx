@@ -1,44 +1,42 @@
-import LinkGallery from "@/components/galleryLink";
+import { Navbar } from "@/components/nav/nav";
+import Image from 'next/image';
+import Link from "next/link";
 
-const previewLink = [
-  {
-    title: "Terminal Like",
-    url: "/terminal",
-    thumbnail: "/thumbnail/terminal.png"
-  },
-  {
-    title: "Resume",
-    url: "/resume",
-    thumbnail: "/thumbnail/resume.png"
-  },
-]
 
 export default function Home() {
   return (
-    <>
-      <nav className="bg-gray-800 p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div
-            className="text-white text-2xl font-bold cursor-pointer"
-          >
-            <a href="/">
-              yoke.th
-            </a>
-
+    <div className="min-h-screen">
+      <Navbar />
+      <main className="flex flex-col items-center justify-between p-12">
+        <div className="grid grid-cols-3 w-full gap-2">
+          <div className="group/card col-span-2 rounded-xl overflow-hidden border relative">
+            <Link href={"/terminal"}>
+              <div className="p-4 absolute bottom-0 z-10">
+                <h2 className="text-4xl text-white font-bold">
+                  Thaminal
+                </h2>
+                <h3 className="text-muted">
+                  A terminal-inspired portfolio where users can type commands to view the my information.
+                </h3>
+              </div>
+              <Image src="/thumbnail/terminal.png" width={1000} height={1000} alt={"terminal thumbnail"} className="group-hover/card:scale-150 group-hover/card:translate-x-44 group-hover/card:translate-y-28 transition" />
+            </Link>
           </div>
-          <div className="hidden md:flex space-x-4">
-            <a
-              href="/"
-              className="text-white hover:text-gray-300 cursor-pointer"
-            >
-              Home
-            </a>
+          <div className="group/card rounded-xl overflow-hidden border">
+            <Link href={"/resume"}>
+              <div className="p-4 z-100">
+                <h2 className="text-xl font-bold">
+                  Resume
+                </h2>
+                <h3 className="text-muted-foreground">
+                  A detailed view of my professional experience, education, and skills.
+                </h3>
+              </div>
+              <Image src="/thumbnail/resume.png" width={1000} height={1000} alt={"resume thumbnail"} className="hover/card:scale-110 transition" />
+            </Link>
           </div>
         </div>
-      </nav>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <LinkGallery links={previewLink} />
       </main>
-    </>
+    </div>
   );
 }
