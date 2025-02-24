@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     'Welcome to Thanapon, the portfolio website of Yoke-TH, showcasing projects, skills, and experiences in software development.',
   keywords: ['Thanapon', 'Yoke-TH', 'portfolio', 'developer', 'software engineering', 'projects'],
   authors: [{ name: 'Thanapon', url: 'https://yoke-th.me' }],
-  viewport: 'width=device-width, initial-scale=1.0',
   robots: 'index, follow',
   openGraph: {
     title: 'Thanapon | Yoke-TH Portfolio',
@@ -31,7 +30,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://yoke-th.me',
   },
-  themeColor: '#ffffff',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: 'white',
 };
 
 export default function RootLayout({
