@@ -1,14 +1,24 @@
 import { ContactUs } from './ContactUs/contact-us';
 import { Logo } from './logo';
-import './nav.css';
 import { Menu } from './Menu';
+import * as motion from 'motion/react-client';
+import React from 'react';
 
 export function Navbar() {
   return (
     <nav>
       <div className="px-16 py-4">
-        <div className="w-full overflow-hidden">
-          <div className="w-full h-[1px] bg-black slide-in-right"></div>
+        <div className="flex justify-end">
+          <motion.div
+            initial={{ width: 0, height: 1 }}
+            animate={{ width: '100%', height: 1 }}
+            transition={{
+              duration: 1,
+            }}
+            style={{
+              backgroundColor: 'black',
+            }}
+          />
         </div>
         <div className="flex justify-between p-2 items-center">
           <div>
@@ -21,9 +31,16 @@ export function Navbar() {
             <ContactUs />
           </div>
         </div>
-        <div className="w-full overflow-hidden">
-          <div className="w-full h-[1px] bg-black slide-in-left"></div>
-        </div>
+        <motion.div
+          initial={{ width: 0, height: 1 }}
+          animate={{ width: '100%', height: 1 }}
+          transition={{
+            duration: 1,
+          }}
+          style={{
+            backgroundColor: 'black',
+          }}
+        />
       </div>
     </nav>
   );
