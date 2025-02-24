@@ -2,12 +2,14 @@ import { Footer } from '@/components/footer/footer';
 import { Navbar } from '@/components/nav/nav';
 import Image from 'next/image';
 import Link from 'next/link';
+import HeroSection from './Hero';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="flex flex-col items-center justify-between p-12">
+      <HeroSection />
+      <section className="flex flex-col items-center justify-between p-12">
         <div className="grid grid-cols-3 w-full gap-2">
           <div className="group/card col-span-2 rounded-xl overflow-hidden border relative">
             <Link href={'/terminal'}>
@@ -44,7 +46,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </main>
+      </section>
       <Footer />
     </div>
   );
