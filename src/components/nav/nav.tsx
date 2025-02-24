@@ -14,7 +14,7 @@ import { Menu } from './Menu';
 export function Navbar() {
   return (
     <nav>
-      <div className="px-8 py-4">
+      <div className="px-16 py-4">
         <div className="w-full overflow-hidden">
           <div className="w-full h-[1px] bg-black slide-in-right"></div>
         </div>
