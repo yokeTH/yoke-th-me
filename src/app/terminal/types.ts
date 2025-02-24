@@ -4,90 +4,85 @@ export interface BaseCommand {
 
 export type TextCommandFormat =
   // Basic formatting
-  | "bold"
-  | "italic"
-  | "underline"
-  | "error"
-  | "success"
-  | "warning"
-  | "highlight"
-  | "code"
-  | "blue"
+  | 'bold'
+  | 'italic'
+  | 'underline'
+  | 'error'
+  | 'success'
+  | 'warning'
+  | 'highlight'
+  | 'code'
+  | 'blue'
   // Headings
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
   // Text transforms
-  | "uppercase"
-  | "lowercase"
-  | "capitalize"
+  | 'uppercase'
+  | 'lowercase'
+  | 'capitalize'
   // Text decorations
-  | "line-through"
-  | "no-underline"
+  | 'line-through'
+  | 'no-underline'
   // Font weights
-  | "thin"
-  | "extralight"
-  | "light"
-  | "normal"
-  | "medium"
-  | "semibold"
-  | "extrabold"
+  | 'thin'
+  | 'extralight'
+  | 'light'
+  | 'normal'
+  | 'medium'
+  | 'semibold'
+  | 'extrabold'
   // Font styles
-  | "normal-case"
-  | "small-caps"
+  | 'normal-case'
+  | 'small-caps'
   // Text alignments
-  | "text-left"
-  | "text-center"
-  | "text-right"
+  | 'text-left'
+  | 'text-center'
+  | 'text-right'
   // Markdown additions
-  | "h5"
-  | "h6"
-  | "blockquote"
-  | "subscript"
-  | "superscript"
-  | "list-item"
-  | "ordered-list-item"
-  | "task-list-item"
-  | "task-list-item-checked"
-  | "code-inline"
-  | "pre"
-  | "kbd"
-  | "footnote"
-  | "mark";
+  | 'h5'
+  | 'h6'
+  | 'blockquote'
+  | 'subscript'
+  | 'superscript'
+  | 'list-item'
+  | 'ordered-list-item'
+  | 'task-list-item'
+  | 'task-list-item-checked'
+  | 'code-inline'
+  | 'pre'
+  | 'kbd'
+  | 'footnote'
+  | 'mark';
 
 export interface TextCommand extends BaseCommand {
-  type: "text";
+  type: 'text';
   format?: TextCommandFormat | TextCommandFormat[];
   content: string;
   url?: string;
 }
 
 export interface LinkCommand extends BaseCommand {
-  type: "link";
+  type: 'link';
   url: string;
   placeholder: string;
 }
 
 export interface ImageCommand extends BaseCommand {
-  type: "image";
+  type: 'image';
   content: string;
 }
 
 export interface EndlineCommand extends BaseCommand {
-  type: "endline";
+  type: 'endline';
 }
 
 export interface separatorCommand extends BaseCommand {
-  type: "separator";
+  type: 'separator';
 }
 
-export type CommandContent =
-  | TextCommand
-  | LinkCommand
-  | ImageCommand
-  | EndlineCommand
-  | separatorCommand;
+export type CommandContent = TextCommand | LinkCommand | ImageCommand | EndlineCommand | separatorCommand;
 
 export interface Command {
   name: string;

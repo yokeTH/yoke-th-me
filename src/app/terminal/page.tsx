@@ -1,17 +1,18 @@
-"use client";
-import React, { useState } from "react";
-import { CommandHistory } from "@/components/ui/terminal/CommandHistory";
-import { CommandInput } from "@/components/ui/terminal/CommandInput";
-import { CommandOutput } from "@/components/ui/terminal/CommandOutput";
-import { commandDecoder } from "@/components/ui/terminal/commandDecoder";
+'use client';
+import React, { useState } from 'react';
+import { CommandHistory } from '@/components/ui/terminal/CommandHistory';
+import { CommandInput } from '@/components/ui/terminal/CommandInput';
+import { CommandOutput } from '@/components/ui/terminal/CommandOutput';
+import { commandDecoder } from '@/components/ui/terminal/commandDecoder';
 
 const TerminalPortfolio: React.FC = () => {
   const [commandHistory, setCommandHistory] = useState<CommandHistory[]>([
     {
-      name: "welcome",
+      name: 'welcome',
       content: (
         <CommandOutput>
-          Hi my name is <span className="bg-yellow-200 text-black text-lg font-bold mb-1">Thanapon Johdee</span> , use the command &quot;about&quot; to learn more about me.
+          Hi my name is <span className="bg-yellow-200 text-black text-lg font-bold mb-1">Thanapon Johdee</span> , use
+          the command &quot;about&quot; to learn more about me.
           <br />
           Alternately use &quot;help&quot; to see all commands.
         </CommandOutput>
@@ -23,7 +24,7 @@ const TerminalPortfolio: React.FC = () => {
     if (!command) return;
     const output = commandDecoder(command);
     setCommandHistory((prev) => [...prev, { name: command, content: output }]);
-    if (command == "clear") {
+    if (command == 'clear') {
       setCommandHistory([]);
       return;
     }
