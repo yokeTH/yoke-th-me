@@ -1,10 +1,10 @@
-"use client";
-import { CommandOutput } from "@/components/ui/terminal/CommandOutput";
-import React from "react";
-import { commands } from "@/app/terminal/commands";
-import { renderCommand } from "@/components/ui/terminal/renderCommand";
-import { renderHelpCommand } from "@/components/ui/terminal/renderHelpCommand";
-import { Command } from "@/app/terminal/types";
+'use client';
+import { CommandOutput } from '@/components/ui/terminal/CommandOutput';
+import React, { type JSX } from 'react';
+import { commands } from '@/app/terminal/commands';
+import { renderCommand } from '@/components/ui/terminal/renderCommand';
+import { renderHelpCommand } from '@/components/ui/terminal/renderHelpCommand';
+import { Command } from '@/app/terminal/types';
 
 export const commandDecoder = (command: string): JSX.Element => {
   const foundCommand = commands[command.toLowerCase() as keyof typeof commands] as Command;
@@ -16,12 +16,9 @@ export const commandDecoder = (command: string): JSX.Element => {
 
   if (!foundCommand) {
     return (
-      <CommandOutput>
-        Command `{command}` not found. Type &quot;help&quot; to see available commands.
-      </CommandOutput>
+      <CommandOutput>Command `{command}` not found. Type &quot;help&quot; to see available commands.</CommandOutput>
     );
   }
-
 
   return renderCommand(foundCommand);
 };
