@@ -10,7 +10,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <section className="flex flex-col items-center justify-between p-12">
-        <div className="grid grid-cols-3 w-full gap-2">
+        <div className="flex flex-col md:grid md:grid-cols-3 w-full gap-2">
           <div className="group/card col-span-2 rounded-xl overflow-hidden border relative">
             <Link href={'/terminal'}>
               <div className="p-4 absolute bottom-0 z-10">
