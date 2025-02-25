@@ -8,11 +8,12 @@ import { Spotlight } from '@/components/ui/spotlight';
 import { BentoSection } from './Bento';
 import Projects from './Projects';
 import { ScrollProgress } from '@/components/magicui/scroll-progress';
+import ScrollDownButton from '@/components/ExploreBtn';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-grid-small-black/[0.2]">
-      <ScrollProgress />
+      <ScrollDownButton />
       <Navbar />
       <div className="container px-4 mx-auto w-full">
         <HeroSection />

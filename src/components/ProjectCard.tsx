@@ -23,33 +23,33 @@ export function ProjectCard({ name, img, github, live, description, tags }: Proj
         alt={'xxx'}
         width={1000}
         height={1000}
-        className=" rounded"
+        className="rounded"
       ></Image>
       <BoxReveal
-        boxColor={'black'}
+        boxColor={'hsl(var(--primary))'}
         duration={0.5}
         width="100%"
       >
         <div className="flex flex-row items-center gap-2">
-          <h4 className="text-2xl text-nowrap">{name}</h4>
-          <div className="w-full h-[1px] bg-primary"></div>
+          <h4 className="text-2xl text-nowrap text-primary">{name}</h4>
+          <div className="w-full h-[1px] bg-muted-foreground"></div>
           {github && (
             <Link href={github}>
-              <FaGithub className="text-xl" />
+              <FaGithub className="text-xl text-primary" />
             </Link>
           )}
           {live && (
             <Link href={live}>
-              <ExternalLink />
+              <ExternalLink className="text-primary" />
             </Link>
           )}
         </div>
       </BoxReveal>
       <BoxReveal
-        boxColor={'black'}
+        boxColor={'hsl(var(--primary))'}
         duration={0.5}
       >
-        <div className="flex flex-row flex-wrap mt-1">
+        <div className="flex flex-row flex-wrap mt-1 text-secondary-foreground">
           {tags.map((tag, index) => (
             <React.Fragment key={index}>
               <span className="">{tag}</span>
@@ -60,13 +60,15 @@ export function ProjectCard({ name, img, github, live, description, tags }: Proj
       </BoxReveal>
 
       <BoxReveal
-        boxColor={'black'}
+        boxColor={'hsl(var(--primary))'}
         duration={0.5}
         width="100%"
       >
-        <span className="line-clamp-3">{description}</span>
-        <div className="px-4 py-2 border w-fit border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
-          Learn More... (soon)
+        <div className="pb-4">
+          <span className="line-clamp-3 text-muted-foreground mb-2">{description}</span>
+          <span className="px-4 py-1 border border-primary bg-primary-foreground text-primary text-sm hover:shadow-[4px_4px_0px_0px_hsl(var(--primary))] transition duration-200">
+            Learn More... (soon)
+          </span>
         </div>
       </BoxReveal>
     </div>
