@@ -36,7 +36,6 @@ export default function Projects() {
         name="Projects"
         position="start"
       />
-      return (
       <div className="grid grid-cols-2 gap-4">
         {projects.map((project, index) => (
           <ProjectCard

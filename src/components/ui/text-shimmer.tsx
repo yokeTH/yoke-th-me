@@ -22,7 +22,7 @@ export function TextShimmer({ children, as: Component = 'p', className, duration
     <MotionComponent
       className={cn(
         'relative inline-block bg-[length:250%_100%,auto] bg-clip-text',
-        'text-transparent [--base-color:hsl(var(--muted))] [--base-gradient-color:hsl(var(--muted-foreground))]',
+        'text-transparent [--base-color:hsl(var(--primary))] [--base-gradient-color:hsl(var(--primary-foreground))]',
         '[--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))] [background-repeat:no-repeat,padding-box]',
         'dark:[--base-color:#71717a] dark:[--base-gradient-color:#ffffff] dark:[--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))]',
         className,

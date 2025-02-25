@@ -15,7 +15,7 @@ export function Navbar() {
             transition={{
               duration: 1,
             }}
-            className="bg-primary-foreground h-[2px]"
+            className="bg-primary h-[2px]"
           />
         </div>
         <div className="flex justify-between p-2 items-center">
@@ -35,7 +35,7 @@ export function Navbar() {
           transition={{
             duration: 1,
           }}
-          className="bg-primary-foreground h-[2px]"
+          className="bg-primary h-[2px]"
         />
       </div>
     </nav>

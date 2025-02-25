@@ -7,11 +7,11 @@ export default function HeroSection() {
   return (
     <section className="md:min-h-[calc(100dvh-96px)] flex flex-col justify-center">
       <div className=" my-4 gap-2 w-full h-fit text-start justify-center items-center text-muted-foreground transition">
-        <div className="inline text-2xl md:text-4xl">
+        <div className="inline font-bold text-2xl md:text-4xl">
           <span className="">Hi, I&apos;m </span>
           <TextLoop
             interval={4}
-            className="font-bold md:text-8xl text-primary"
+            className="font-bold md:text-8xl text-secondary-foreground bg-secondary"
           >
             <span>Thanapon</span>
             <span>Yoke.th</span>
@@ -25,7 +25,7 @@ export default function HeroSection() {
             In the meantime, check out my{' '}
             <Link
               href="https://github.com/yokeTH"
-              className="px-4 py-1 border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200"
+              className="px-4 py-1 border border-primary bg-primary-foreground text-primary text-sm hover:shadow-[4px_4px_0px_0px_hsl(var(--primary))] transition duration-200"
             >
               GitHub
             </Link>{' '}
