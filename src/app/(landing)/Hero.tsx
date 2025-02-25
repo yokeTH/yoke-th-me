@@ -19,7 +19,7 @@ export default function HeroSection() {
           <span className=""> a third-year engineering student at Chulalongkorn University and a developer.</span>
         </div>
         <div className="pt-8 text-xl flex flex-col gap-2">
-          <span className="block">My site's still a work in progress—stay tuned!</span>
+          <span className="block">My site&apos;s still a work in progress—stay tuned!</span>
           <span className="block">
             In the meantime, check out my{' '}
             <Link
@@ -28,7 +28,7 @@ export default function HeroSection() {
             >
               GitHub
             </Link>{' '}
-            to see what I'm up to! 🚀
+            to see what I&apos;m up to! 🚀
           </span>
         </div>
       </div>
