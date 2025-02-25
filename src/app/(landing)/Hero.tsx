@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <section className="container px-4 mx-auto w-full md:min-h-[calc(100dvh-360px)] flex flex-col justify-center">
+    <section className="md:min-h-[calc(100dvh-360px)] flex flex-col justify-center">
       <div className=" my-4 gap-2 w-full h-fit text-start justify-center items-center text-primary transition">
         <div className="inline text-2xl md:text-4xl">
           <span className="">Hi, I&apos;m </span>
