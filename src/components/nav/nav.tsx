@@ -4,11 +4,6 @@ import { Menu } from './Menu';
 import * as motion from 'motion/react-client';
 import React from 'react';
 
-const lineStyle: React.CSSProperties = {
-  height: '2px',
-  background: 'black',
-};
-
 export function Navbar() {
   return (
     <nav>
@@ -20,7 +15,7 @@ export function Navbar() {
             transition={{
               duration: 1,
             }}
-            style={lineStyle}
+            className="bg-primary-foreground h-[2px]"
           />
         </div>
         <div className="flex justify-between p-2 items-center">
@@ -40,7 +35,7 @@ export function Navbar() {
           transition={{
             duration: 1,
           }}
-          style={lineStyle}
+          className="bg-primary-foreground h-[2px]"
         />
       </div>
     </nav>
