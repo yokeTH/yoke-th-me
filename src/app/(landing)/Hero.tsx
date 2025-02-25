@@ -6,12 +6,12 @@ import Link from 'next/link';
 export default function HeroSection() {
   return (
     <section className="md:min-h-[calc(100dvh-96px)] flex flex-col justify-center">
-      <div className=" my-4 gap-2 w-full h-fit text-start justify-center items-center text-primary transition">
+      <div className=" my-4 gap-2 w-full h-fit text-start justify-center items-center text-muted-foreground transition">
         <div className="inline text-2xl md:text-4xl">
           <span className="">Hi, I&apos;m </span>
           <TextLoop
             interval={4}
-            className="font-bold md:text-8xl"
+            className="font-bold md:text-8xl text-primary"
           >
             <span>Thanapon</span>
             <span>Yoke.th</span>
