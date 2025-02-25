@@ -1,5 +1,6 @@
 import { CharacterScrambleEffect } from '@/components/CharacterScrambleEffect';
 import { TextLoop } from '@/components/ui/text-loop';
+import { TextShimmer } from '@/components/ui/text-shimmer';
 import Link from 'next/link';
 
 export default function HeroSection() {
@@ -19,7 +20,7 @@ export default function HeroSection() {
           <span className=""> a third-year engineering student at Chulalongkorn University and a developer.</span>
         </div>
         <div className="pt-8 text-xl flex flex-col gap-2">
-          <span className="block">My site&apos;s still a work in progress—stay tuned!</span>
+          <TextShimmer className="block">My site&apos;s still a work in progress—stay tuned!</TextShimmer>
           <span className="block">
             In the meantime, check out my{' '}
             <Link
