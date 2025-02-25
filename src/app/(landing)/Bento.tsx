@@ -6,7 +6,7 @@ export function BentoSection() {
   return (
     <section className="flex flex-col items-center justify-between p-12">
       <div className="flex flex-col md:grid md:grid-cols-3 w-full gap-2">
-        <div className="md:col-span-2 aspect-video overflow-hidden border-2 border-black relative">
+        <div className="md:col-span-2 aspect-video overflow-hidden border-2 border-black relative p-4">
           <Link href={'/terminal'}>
             <div className="p-4 absolute bottom-0 z-10">
               <h2 className="text-4xl text-white font-bold">Thaminal</h2>
@@ -27,10 +27,10 @@ export function BentoSection() {
             />
           </Link>
         </div>
-        <div className="overflow-hidden border-2 border-black relative h-96">
+        <div className="overflow-hidden border-2 border-black relative p-4">
           <Link href={'/resume'}>
             <div className="absolute p-4 z-100 z-20">
-              <h2 className="text-xl font-bold">Resume</h2>
+              <h2 className="text-4xl font-bold">Resume</h2>
               <h3 className="text-muted-foreground">
                 A detailed view of my professional experience, education, and skills.
               </h3>
