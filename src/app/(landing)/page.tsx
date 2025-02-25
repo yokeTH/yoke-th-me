@@ -9,7 +9,7 @@ import { BentoSection } from './Bento';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-grid-small-black/[0.2]">
       <Navbar />
       <HeroSection />
       <BentoSection />
