@@ -6,7 +6,7 @@ interface SectionHeaderProps {
 export function SectionHeader({ name, position = 'start' }: SectionHeaderProps) {
   return (
     <div
-      className={`flex flex-row${position === 'end' && '-reverse'} gap-2 items-center my-4`}
+      className={`flex ${position === 'end' ? ' flex-row-reverse' : 'flex-row'} gap-2 items-center my-4`}
       id={name.toLocaleLowerCase()}
     >
       <h2 className="text-4xl">{name}.</h2>
