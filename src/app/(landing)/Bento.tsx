@@ -1,10 +1,15 @@
 import { ProgressiveBlur } from '@/components/ui/progressive-blur';
 import Link from 'next/link';
 import Image from 'next/image';
+import { SectionHeader } from '@/components/SectionHeader';
 
 export function BentoSection() {
   return (
-    <section className="flex flex-col items-center justify-between">
+    <section>
+      <SectionHeader
+        name="Random"
+        position="end"
+      />
       <div className="flex flex-col md:grid md:grid-cols-3 w-full gap-2">
         <div className="md:col-span-2 aspect-video overflow-hidden border-2 border-black relative p-4">
           <Link href={'/terminal'}>
