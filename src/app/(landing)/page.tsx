@@ -16,8 +16,8 @@ export default function Home() {
         <HeroSection />
         <Projects />
         <BentoSection />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
