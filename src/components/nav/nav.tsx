@@ -5,7 +5,7 @@ import * as motion from 'motion/react-client';
 import React from 'react';
 
 const lineStyle: React.CSSProperties = {
-  height: '4px',
+  height: '2px',
   background: 'black',
 };
 
