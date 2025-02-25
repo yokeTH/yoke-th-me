@@ -31,7 +31,7 @@ export function ProjectCard({ name, img, github, live, description, tags }: Proj
         width="100%"
       >
         <div className="flex flex-row items-center gap-2">
-          <h4 className="text-2xl">{name}</h4>
+          <h4 className="text-2xl text-nowrap">{name}</h4>
           <div className="w-full h-[1px] bg-primary"></div>
           {github && (
             <Link href={github}>
