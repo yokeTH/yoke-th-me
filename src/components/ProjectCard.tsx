@@ -26,7 +26,7 @@ export function ProjectCard({ name, img, github, live, description, tags }: Proj
         className="rounded"
       ></Image>
       <BoxReveal
-        boxColor={'black'}
+        boxColor={'hsl(var(--primary))'}
         duration={0.5}
         width="100%"
       >
@@ -46,7 +46,7 @@ export function ProjectCard({ name, img, github, live, description, tags }: Proj
         </div>
       </BoxReveal>
       <BoxReveal
-        boxColor={'black'}
+        boxColor={'hsl(var(--primary))'}
         duration={0.5}
       >
         <div className="flex flex-row flex-wrap mt-1 text-secondary-foreground">
@@ -60,7 +60,7 @@ export function ProjectCard({ name, img, github, live, description, tags }: Proj
       </BoxReveal>
 
       <BoxReveal
-        boxColor={'black'}
+        boxColor={'hsl(var(--primary))'}
         duration={0.5}
         width="100%"
       >
